@@ -3,7 +3,7 @@ class Solution {
         int f=0,s=n;
         int ans[]=new int[nums.length];
         int idx=0;
-        while(idx<n*2){
+        for(;idx<n*2;){
             ans[idx++]=nums[f++];
             ans[idx++]=nums[s++];
         }
