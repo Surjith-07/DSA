@@ -1,7 +1,7 @@
 class Solution {
     public boolean checkIfPangram(String s) {
-        for(char ch='a';ch<='z';++ch){
-            if(s.indexOf(ch)==-1)return false;
+        for(int i=0;i<26;++i){
+            if(s.indexOf((char)((int)'a'+i))==-1)return false;
         }
         return true;
     }
