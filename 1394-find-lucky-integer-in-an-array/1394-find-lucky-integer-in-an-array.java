@@ -1,11 +1,10 @@
 class Solution {
     public int findLucky(int[] arr) {
-        int freq[]=new int[501];
-        for(int i:arr){
-            freq[i]++;
-        }
-        for(int i=freq.length-1;i>=1;i--){
-            if(freq[i]==i) return i;
+        Map<Integer,Integer> map=new TreeMap<>(Collections.reverseOrder());
+        for(int i:arr) map.put(i,map.getOrDefault(i,0)+1);
+        
+        for(Map.Entry<Integer,Integer> e:map.entrySet()){
+            if(e.getKey()==e.getValue()) return e.getValue();
         }
         return -1;
     }
