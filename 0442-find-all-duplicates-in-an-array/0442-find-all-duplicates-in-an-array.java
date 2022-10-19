@@ -1,6 +1,6 @@
 class Solution {
     public List<Integer> findDuplicates(int[] nums) {
-        int freq[]=new int[100001];
+        int freq[]=new int[100000];
         for(int i:nums) freq[i]++;
         List<Integer> ans=new ArrayList<>();
         for(int i=1;i<freq.length;++i){
